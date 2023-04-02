@@ -4,11 +4,17 @@ using UnityEngine;
 
 public class Board : MonoBehaviour
 {
-    public int BoardSize = 50;
+    //public int BoardSize = 50;
     public GameObject prefabCell = null;
 
     GameObject[,] grid = null;
 
+    int BoardSize;
+
+    void Awake()
+    {
+        BoardSize = int.Parse(UIManager.Inst.boardSizes);
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -23,8 +29,6 @@ public class Board : MonoBehaviour
 		{
             floodFill(Random.Range(0, BoardSize), Random.Range(0, BoardSize), Color.red);
         }
-
-
         if(Input.GetMouseButton(0))
 		{
             // 마우스 위치에서 시작하는 ray 를 생성해서 이 ray 와 출동하는 셀을 찾기 위해
@@ -39,7 +43,6 @@ public class Board : MonoBehaviour
 		}
     }
 
-
     void generateBoard()
     {
         grid = new GameObject[BoardSize, BoardSize];
@@ -47,7 +50,7 @@ public class Board : MonoBehaviour
         {
             for (int x = 0; x < BoardSize; ++x)
             {
-                grid[y, x] = Instantiate(prefabCell, new Vector3(x-BoardSize/2, y -BoardSize / 2, 0), Quaternion.identity, transform);
+                grid[y, x] = Instantiate(prefabCell, new Vector3(x-BoardSize/2, y -BoardSize/2, 0), Quaternion.identity, transform);
 
                 if (Random.Range(0, 1f) <= 0.5f)
                 {
@@ -103,6 +106,4 @@ public class Board : MonoBehaviour
 		floodFill(x, y + 1, newColor); // 상
 		floodFill(x, y - 1, newColor); // 하
     }
-
-
 }
