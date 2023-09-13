@@ -18,7 +18,7 @@
 
 # 이미지 : 
 [입력 이미지]<br>
-<img width="956" alt="스크린샷 2023-09-14 오전 2 45 36" src="https://github.com/Wally0822/Unity_MongoAtlasDB/assets/111326483/705573e1-e5d2-4dc8-a3cf-78753ec47c03" width="50" height="300">
+<img width="956" alt="스크린샷 2023-09-14 오전 2 45 36" src="https://github.com/Wally0822/Unity_MongoAtlasDB/assets/111326483/705573e1-e5d2-4dc8-a3cf-78753ec47c03" width="20" height="300">
 <br>
 [보드 생성 이미지]<br>
 <img width="544" alt="스크린샷 2023-09-14 오전 2 45 12" src="https://github.com/Wally0822/Unity_MongoAtlasDB/assets/111326483/dd07f4af-665e-448d-800b-a50070291b25">
